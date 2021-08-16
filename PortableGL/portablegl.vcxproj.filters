@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{f60e69e6-ca77-47a9-abbc-776ec1b045f6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="glcommon">
+      <UniqueIdentifier>{83191fb3-4e55-4f9b-b765-977f1fa8e10f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="yuza_console.props" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="glcommon\chalfedge.c">
+      <Filter>glcommon</Filter>
+    </ClCompile>
+    <ClCompile Include="glcommon\cprimitives.c">
+      <Filter>glcommon</Filter>
+    </ClCompile>
+    <ClCompile Include="glcommon\crsw_math.c">
+      <Filter>glcommon</Filter>
+    </ClCompile>
+    <ClCompile Include="glcommon\gltools.c">
+      <Filter>glcommon</Filter>
+    </ClCompile>
+    <ClCompile Include="glcommon\stb_vorbis.c">
+      <Filter>glcommon</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
