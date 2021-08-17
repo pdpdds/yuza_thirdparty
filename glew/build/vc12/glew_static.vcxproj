@@ -164,7 +164,7 @@
       <Optimization>Disabled</Optimization>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>SKYOS32;MSC_VER=1920;GLEW_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>GLEW_NO_GLU;SKYOS32;MSC_VER=1920;GLEW_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <BufferSecurityCheck>false</BufferSecurityCheck>
       <AdditionalIncludeDirectories>C:\GitHub\yuza_thirdparty\glew\include;./;$(YUZA_ROOT)/corelib/streams;$(YUZA_ROOT)/corelib/stl/sgi;.\glcommon;$(YUZA_ROOT)/runtime/include/ansic;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>

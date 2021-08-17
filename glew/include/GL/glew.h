@@ -185,7 +185,7 @@ typedef _W64 int ptrdiff_t;
 #endif
 
 #ifndef GLAPI
-#  if defined(__MINGW32__) || defined(__CYGWIN__)
+#  if defined(__MINGW32__) || defined(__CYGWIN__) || defined(SKYOS32)
 #    define GLAPI extern
 #  else
 #    define GLAPI WINGDIAPI
