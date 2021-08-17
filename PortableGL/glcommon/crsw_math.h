@@ -7,7 +7,7 @@
 #include <stdlib.h>
 #include <stdint.h>
 
-//#define MANGLE_TYPES
+#define MANGLE_TYPES
 
 #ifdef MANGLE_TYPES
 #define vec2 glinternal_vec2

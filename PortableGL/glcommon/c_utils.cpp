@@ -4,6 +4,8 @@
 #include <string.h>
 #include <ctype.h>
 #include <assert.h>
+#include <unistd.h>
+#include <math.h>
 
 /** Useful utility function since strdup isn't in standard C.*/
 char* mystrdup(const char* str)
@@ -199,7 +201,7 @@ int freadstring_into_str(FILE* input, int delim, char* str, size_t len)
 		return 0;
 
 	while (i < len-1) {
-		temp = getc(input);
+		temp = fgetc(input);
 
 		if (temp == EOF || temp == delim) {
 			if (!i && temp != delim) {
@@ -283,7 +285,7 @@ char* freadstring(FILE* input, int delim, size_t max_len)
 
 int fpeek(FILE* input)
 {
-	int tmp = getc(input);
+	int tmp = fgetc(input);
 	ungetc(tmp, input);
 	return tmp;
 }
@@ -425,7 +427,7 @@ int read_char(FILE* input, const char* skip_chars, int complement, int clear_lin
 	SET_C_ARRAY(skip, (byte*)skip_chars, 1, strlen(tmp_skip));
 
 	do {
-		ret = getc(input);
+		ret = fgetc(input);
 		if (ret == EOF)
 			return ret;
 		tmp = ret;
@@ -433,7 +435,7 @@ int read_char(FILE* input, const char* skip_chars, int complement, int clear_lin
 	} while ((!complement && c) || (complement && !c));
 
 	if (clear_line && ret != '\n')
-		do { c = getc(input); } while (c != '\n' && c != EOF);
+		do { c = fgetc(input); } while (c != '\n' && c != EOF);
 
 	return ret;
 }
@@ -449,7 +451,7 @@ char* read_string(FILE* file, const char* skip_chars, int delim, size_t max_len)
 	SET_C_ARRAY(skip, (byte*)skip_chars, 1, strlen(tmp_skip));
 
 	do {
-		tmp = getc(file);
+		tmp = fgetc(file);
 		if (tmp == EOF)
 			return NULL;
 		tmp2 = tmp;

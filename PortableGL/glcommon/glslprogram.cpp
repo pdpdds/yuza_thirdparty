@@ -9,7 +9,7 @@ using std::ios;
 #include <sstream>
 using std::ostringstream;
 
-#include <sys/stat.h>
+//#include <sys/stat.h>
 
 GLSLProgram::GLSLProgram() : handle(0), linked(false) { }
 
@@ -29,7 +29,7 @@ bool GLSLProgram::compile_shader_file(const char * fileName,
 		}
 	}
 
-	ifstream inFile( fileName, ios::in );
+	ifstream inFile( fileName );
 	if (!inFile) {
 		return false;
 	}
@@ -37,10 +37,11 @@ bool GLSLProgram::compile_shader_file(const char * fileName,
 	ostringstream code;
 	//this right here is not good it reads EOF into the source in linux
 	
-	int c = inFile.get();
+	int c;
+	inFile >> c;
 	while (inFile.good()) {
 		code << (char) c;
-		c = inFile.get();
+		inFile >> c;
 	}
 	inFile.close();
 

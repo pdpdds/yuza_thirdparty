@@ -14,11 +14,16 @@
     <None Include="yuza_console.props" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="glcommon\chalfedge.c" />
-    <ClCompile Include="glcommon\cprimitives.c" />
-    <ClCompile Include="glcommon\crsw_math.c" />
-    <ClCompile Include="glcommon\gltools.c" />
-    <ClCompile Include="glcommon\stb_vorbis.c" />
+    <ClCompile Include="glcommon\controls.cpp" />
+    <ClCompile Include="glcommon\glm_glframe.cpp" />
+    <ClCompile Include="glcommon\glm_halfedge.cpp" />
+    <ClCompile Include="glcommon\glm_primitives.cpp" />
+    <ClCompile Include="glcommon\glslprogram.cpp" />
+    <ClCompile Include="glcommon\gltools.cpp" />
+    <ClCompile Include="glcommon\halfedge.cpp" />
+    <ClCompile Include="glcommon\rsw_glframe.cpp" />
+    <ClCompile Include="glcommon\rsw_math.cpp" />
+    <ClCompile Include="glcommon\rsw_primitives.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{BCBCF66B-B563-4DEC-BE1A-A5503AC2C2E4}</ProjectGuid>
@@ -66,14 +71,14 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
-      <AdditionalOptions>/Oy  /arch:SSE /Zc:threadSafeInit- %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>/Oy  /arch:SSE  /Zc:threadSafeInit- %(AdditionalOptions)</AdditionalOptions>
       <Optimization>Disabled</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
       <IntrinsicFunctions>false</IntrinsicFunctions>
       <FavorSizeOrSpeed>Neither</FavorSizeOrSpeed>
       <OmitFramePointers>true</OmitFramePointers>
-      <AdditionalIncludeDirectories>./;$(YUZA_ROOT)/corelib/streams;$(YUZA_ROOT)/corelib/stl/sgi;.\glcommon;$(YUZA_ROOT)/runtime/include/ansic;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>_MSC_VER=1920;SKYOS32=100;LIBSTUDXML_STATIC_LIB=1</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>./;$(YUZA_ROOT)/corelib/streams;$(YUZA_ROOT)/corelib/stl/sgi;.\glcommon;$(YUZA_ROOT)/runtime/include/ansic;$(YUZA_ROOT)/thirdparty/opengl;$(YUZA_THIRDPARTY)/glew\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_MSC_VER=1920;SKYOS32=100;_CRT_NO_TIME_T;STB_IMAGE_STATIC;STBI_NO_THREAD_LOCALS</PreprocessorDefinitions>
       <IgnoreStandardIncludePath>true</IgnoreStandardIncludePath>
       <StringPooling>
       </StringPooling>
@@ -131,7 +136,8 @@
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
     </Link>
     <PostBuildEvent>
-      <Command>copy "$(TargetDir)*$(TargetName)$(TargetExt)" "$(YUZA_ROOT)\Bin\"</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">

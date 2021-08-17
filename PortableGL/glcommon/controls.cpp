@@ -3,6 +3,7 @@
 
 #include <cstring>
 #include <cstdio>
+#include <unistd.h>
 
 //SDL_Keycode is typedef Sint32 = int32_t so
 //values should probably be int32_t ...

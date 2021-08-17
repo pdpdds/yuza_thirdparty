@@ -248,7 +248,7 @@ inline std::ostream& operator<<(std::ostream& stream, const vec3& a)
 	return stream <<"("<<a.x<<", "<<a.y<<", "<<a.z<<")";
 }
 
-inline std::istream& operator>>(std::istream& stream, vec3& a)
+/*inline std::istream& operator>>(std::istream& stream, vec3& a)
 {
 	//no error checking for now
 	//ignore junk ie whitespace till open paren, 1000 is arbitrary
@@ -261,7 +261,7 @@ inline std::istream& operator>>(std::istream& stream, vec3& a)
 	stream >> a.z;
 	stream.get();
 	return stream;
-}
+}*/
 
 inline bool operator==(const vec3& a, const vec3& b)
 {
@@ -597,7 +597,7 @@ inline std::ostream& operator<<(std::ostream& stream, const dvec3& a)
 	return stream <<"("<<a.x<<", "<<a.y<<", "<<a.z<<")";
 }
 
-inline std::istream& operator>>(std::istream& stream, dvec3& a)
+/*inline std::istream& operator>>(std::istream& stream, dvec3& a)
 {
 	//no error checking for now
 	//ignore junk ie whitespace till open paren, 1000 is arbitrary
@@ -611,7 +611,7 @@ inline std::istream& operator>>(std::istream& stream, dvec3& a)
 	stream >> a.z;
 	stream.get();
 	return stream;
-}
+}*/
 
 inline bool operator==(const dvec3& a, const dvec3& b)
 {

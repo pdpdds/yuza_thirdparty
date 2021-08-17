@@ -8657,7 +8657,7 @@ static Color logic_ops_pixel(Color s, Color d)
 	case GL_OR_INVERTED:
 		return make_Color(~s.r | d.r, ~s.g | d.g, ~s.b | d.b, ~s.a | d.a);
 	default:
-		puts("Unrecognized logic op!, defaulting to GL_COPY");
+		printf("Unrecognized logic op!, defaulting to GL_COPY");
 		return s;
 	}
 
@@ -8686,7 +8686,7 @@ static int stencil_test(u8 stencil)
 	case GL_NOTEQUAL: return (ref & mask) != (stencil & mask);
 	case GL_ALWAYS:   return 1;
 	default:
-		puts("Error: unrecognized stencil function!");
+		printf("Error: unrecognized stencil function!");
 		return 0;
 	}
 

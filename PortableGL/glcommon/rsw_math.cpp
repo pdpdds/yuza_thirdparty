@@ -56,8 +56,8 @@ void load_rotation_mat3(mat3& mat, vec3 v, float angle)
 	float s, c;
 	float xx, yy, zz, xy, yz, zx, xs, ys, zs, one_c;
 
-	s = float(std::sin(angle));
-	c = float(std::cos(angle));
+	s = float(::sin(angle));
+	c = float(::cos(angle));
 
 	// Rotation matrix is normalized
 	v.normalize();
@@ -162,8 +162,8 @@ void load_rotation_mat4(mat4& mat, vec3 v, float angle)
 	float s, c;
 	float xx, yy, zz, xy, yz, zx, xs, ys, zs, one_c;
 
-	s = float(std::sin(angle));
-	c = float(std::cos(angle));
+	s = float(::sin(angle));
+	c = float(::cos(angle));
 
 //	// Rotation matrix is normalized
 	v.normalize();

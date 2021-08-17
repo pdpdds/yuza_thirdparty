@@ -44,7 +44,7 @@ void check_errors(int n, const char* str)
 }
 
 
-
+//20210817
 int file_read(FILE* file, char** out)
 {
 	char* data;
@@ -56,7 +56,7 @@ int file_read(FILE* file, char** out)
 	size = ftell(file);
 	if (size <= 0) {
 		if (size == -1)
-			perror("ftell failure");
+			printf("ftell failure");
 		fclose(file);
 		return 0;
 	}
@@ -69,7 +69,7 @@ int file_read(FILE* file, char** out)
 
 	rewind(file);
 	if (!fread(data, size, 1, file)) {
-		perror("fread failure");
+		printf("fread failure");
 		fclose(file);
 		free(data);
 		return 0;

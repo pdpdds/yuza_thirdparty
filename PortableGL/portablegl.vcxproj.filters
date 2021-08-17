@@ -12,19 +12,34 @@
     <None Include="yuza_console.props" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="glcommon\chalfedge.c">
+    <ClCompile Include="glcommon\controls.cpp">
       <Filter>glcommon</Filter>
     </ClCompile>
-    <ClCompile Include="glcommon\cprimitives.c">
+    <ClCompile Include="glcommon\glm_glframe.cpp">
       <Filter>glcommon</Filter>
     </ClCompile>
-    <ClCompile Include="glcommon\crsw_math.c">
+    <ClCompile Include="glcommon\glm_halfedge.cpp">
       <Filter>glcommon</Filter>
     </ClCompile>
-    <ClCompile Include="glcommon\gltools.c">
+    <ClCompile Include="glcommon\glm_primitives.cpp">
       <Filter>glcommon</Filter>
     </ClCompile>
-    <ClCompile Include="glcommon\stb_vorbis.c">
+    <ClCompile Include="glcommon\glslprogram.cpp">
+      <Filter>glcommon</Filter>
+    </ClCompile>
+    <ClCompile Include="glcommon\halfedge.cpp">
+      <Filter>glcommon</Filter>
+    </ClCompile>
+    <ClCompile Include="glcommon\rsw_primitives.cpp">
+      <Filter>glcommon</Filter>
+    </ClCompile>
+    <ClCompile Include="glcommon\rsw_math.cpp">
+      <Filter>glcommon</Filter>
+    </ClCompile>
+    <ClCompile Include="glcommon\rsw_glframe.cpp">
+      <Filter>glcommon</Filter>
+    </ClCompile>
+    <ClCompile Include="glcommon\gltools.cpp">
       <Filter>glcommon</Filter>
     </ClCompile>
   </ItemGroup>
