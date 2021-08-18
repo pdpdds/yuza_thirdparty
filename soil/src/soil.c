@@ -16,7 +16,7 @@
 #define SOIL_CHECK_FOR_GL_ERRORS 0
 
 
-#include <gl/glew.h>
+
 
 #define APIENTRY
 #define GL_MAX_TEXTURE_SIZE 0x0D33
@@ -25,6 +25,7 @@
 #define GL_LUMINANCE_ALPHA 0x190A
 #define GL_CLAMP 0x2900
 
+#include <portablegl.h>
 /*#ifdef _WIN32
 	#define WIN32_LEAN_AND_MEAN
 	#include <windows.h>
@@ -1961,6 +1962,12 @@ int query_cubemap_capability( void )
 int query_DXT_capability( void )
 {
 	/*	check for the capability	*/
+//20210818
+#if defined(SKYOS32)
+	return SOIL_CAPABILITY_NONE;
+#endif // defined(SKYOS32)
+
+
 	if( has_DXT_capability == SOIL_CAPABILITY_UNKNOWN )
 	{
 		/*	we haven't yet checked for the capability, do so	*/
@@ -2005,11 +2012,12 @@ int query_DXT_capability( void )
 				CFRelease( extensionName );
 				CFRelease( bundle );
 			#else
-				ext_addr = (P_SOIL_GLCOMPRESSEDTEXIMAGE2DPROC)
+			//20210818
+				/*ext_addr = (P_SOIL_GLCOMPRESSEDTEXIMAGE2DPROC)
 						glXGetProcAddressARB
 						(
 							(const GLubyte *)"glCompressedTexImage2DARB"
-						);
+						);*/
 			#endif
 			/*	Flag it so no checks needed later	*/
 			if( NULL == ext_addr )

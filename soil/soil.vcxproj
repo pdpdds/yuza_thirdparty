@@ -68,7 +68,7 @@
       <IntrinsicFunctions>false</IntrinsicFunctions>
       <FavorSizeOrSpeed>Neither</FavorSizeOrSpeed>
       <OmitFramePointers>true</OmitFramePointers>
-      <AdditionalIncludeDirectories>./include;$(YUZA_ROOT)/corelib/streams;$(YUZA_ROOT)/corelib/stl/sgi;$(YUZA_ROOT)/runtime/include/ansic;../glew/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>./include;$(YUZA_ROOT)/corelib/streams;$(YUZA_ROOT)/corelib/stl/sgi;$(YUZA_ROOT)/runtime/include/ansic;../portablegl;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_MSC_VER=1920;SKYOS32=100;LIBSTUDXML_STATIC_LIB=1</PreprocessorDefinitions>
       <IgnoreStandardIncludePath>true</IgnoreStandardIncludePath>
       <StringPooling>
@@ -81,7 +81,7 @@
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <CallingConvention>Cdecl</CallingConvention>
-      <DisableSpecificWarnings>4146;4244</DisableSpecificWarnings>
+      <DisableSpecificWarnings>4146;4244;4018;4819</DisableSpecificWarnings>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <RemoveUnreferencedCodeData>true</RemoveUnreferencedCodeData>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
