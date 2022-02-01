@@ -2,7 +2,7 @@
 #define GLSLPROGRAM_H
 
 #include <GL/glew.h>
-#include <GL/gl.h>
+//#include <GL/gl.h>
 
 #include <string>
 #include <cstdarg>
