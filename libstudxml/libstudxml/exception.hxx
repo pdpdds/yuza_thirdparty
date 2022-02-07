@@ -6,11 +6,11 @@
 
 #include <libstudxml/details/pre.hxx>
 
-#include <stdexcept>
+#include <typeinfo>
 
 namespace xml
 {
-  class exception: public std::_Exception {};
+  class exception: public std::exception {};
 }
 
 #include <libstudxml/details/post.hxx>

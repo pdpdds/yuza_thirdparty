@@ -7,7 +7,8 @@
 #include <libstudxml/details/pre.hxx>
 
 #include <string>
-//#include <iosfwd>
+#include <ostream>
+#include <istream>
 
 #include <libstudxml/forward.hxx>
 

@@ -50,7 +50,7 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
-    <Import Project="yuza_console.props" />
+    <Import Project="yuza_eastl.props" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
@@ -76,8 +76,8 @@
       <IntrinsicFunctions>false</IntrinsicFunctions>
       <FavorSizeOrSpeed>Neither</FavorSizeOrSpeed>
       <OmitFramePointers>true</OmitFramePointers>
-      <AdditionalIncludeDirectories>./;$(YUZA_ROOT)/corelib/streams;$(YUZA_ROOT)/corelib/stl/sgi;.\libstudxml;$(YUZA_ROOT)/runtime/include/ansic;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>_MSC_VER=1920;SKYOS32=100;LIBSTUDXML_STATIC_LIB=1</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>./;.\libstudxml;$(YUZA_ROOT)/runtime/include/ansic;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>EA_COMPILER_NO_STRUCTURED_BINDING;_MSC_VER=1920;SKYOS32=100;LIBSTUDXML_STATIC_LIB=1</PreprocessorDefinitions>
       <IgnoreStandardIncludePath>true</IgnoreStandardIncludePath>
       <StringPooling>
       </StringPooling>
